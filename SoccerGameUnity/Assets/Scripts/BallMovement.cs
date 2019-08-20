@@ -10,6 +10,7 @@ public class BallMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        new Vector3(1, 0, 0);
         rb = GetComponent<Rigidbody>();
         rb.AddForce(transform.forward * ballThrust, ForceMode.Acceleration);
     }

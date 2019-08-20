@@ -2,22 +2,34 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+public enum PlayerController
+{
+    player1,
+    player2
+}
+
 public class PaddleMovement : MonoBehaviour
 {
+    public PlayerController playerSetting;
     public float speed;
     public float clampValue;
+    public string axisName;
 
-    // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
-        
+        if(playerSetting == PlayerController.player1)
+        {
+            axisName = "player1";
+        }
+        if(playerSetting == PlayerController.player2)
+        {
+            axisName = "player2";
+        }
     }
 
-    // Update is called once per frame
-    void Update()
+    void update()
     {
-        MovePaddle(Input.GetAxis("Horizontal"));
-        Debug.Log(Input.GetAxis("Horizontal"));
+        MovePaddle(Input.GetAxis(axisName));
     }
 
     public void MovePaddle(float amountToMove)
