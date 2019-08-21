@@ -14,10 +14,14 @@ public class PaddleMovement : MonoBehaviour
     public float speed;
     public float clampValue;
     public string axisName;
+    public AudioClip impact;
+    private AudioSource catMeow;
 
     private void Start()
     {
-        if(playerSetting == PlayerController.player1)
+        catMeow = GetComponent<AudioSource>();
+
+        if (playerSetting == PlayerController.player1)
         {
             axisName = "player1";
         }
@@ -41,4 +45,8 @@ public class PaddleMovement : MonoBehaviour
         gameObject.transform.position = clampedGameObjectPosition;
     }
 
+    private void OnCollisionEnter(Collision collision)
+    {
+        catMeow.PlayOneShot(impact);
+    }
 }
