@@ -7,7 +7,7 @@ public class GoalZone : MonoBehaviour
     public string teamname;
     public ScoreBoard sm;
 
-    private void OnTriggerEnter(Collider other)
+    private void OnCollisionEnter(Collision other)
     {
         Destroy(other.gameObject);
         BallManager.instance.InstantiateBall();
@@ -22,5 +22,4 @@ public class GoalZone : MonoBehaviour
             sm.Team2Scored();
         }
     }
-        
 }

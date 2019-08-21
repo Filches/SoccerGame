@@ -19,12 +19,9 @@ public class BallManager : MonoBehaviour
         InstantiateBall();
     }
 
-
     public void InstantiateBall()
     {
         int index = Random.Range(0, 4);
         GameObject ballCopy = Instantiate(ball, transform.position, Quaternion.Euler(0, potentialAngles[index], 0));
     }
-
-
 }

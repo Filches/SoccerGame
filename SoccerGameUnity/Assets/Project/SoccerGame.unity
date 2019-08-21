@@ -225,9 +225,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerSetting: 1
-  speed: 5
-  clampValue: 5
-  axisName: 
+  speed: 2
+  clampValue: 7
+  axisName: player2
 --- !u!1 &373582082
 GameObject:
   m_ObjectHideFlags: 0
@@ -482,6 +482,7 @@ GameObject:
   - component: {fileID: 778242200}
   - component: {fileID: 778242199}
   - component: {fileID: 778242198}
+  - component: {fileID: 778242202}
   m_Layer: 0
   m_Name: Goal 1
   m_TagString: Untagged
@@ -561,6 +562,20 @@ Transform:
   m_Father: {fileID: 1747630214}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+--- !u!114 &778242202
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 778242197}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9907ef6cdd4711948b2635bc354552ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  teamname: team1
+  sm: {fileID: 0}
 --- !u!1 &973518406
 GameObject:
   m_ObjectHideFlags: 0
@@ -875,6 +890,7 @@ GameObject:
   - component: {fileID: 2027206938}
   - component: {fileID: 2027206937}
   - component: {fileID: 2027206936}
+  - component: {fileID: 2027206940}
   m_Layer: 0
   m_Name: Goal 2
   m_TagString: Untagged
@@ -954,6 +970,20 @@ Transform:
   m_Father: {fileID: 1747630214}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+--- !u!114 &2027206940
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2027206935}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9907ef6cdd4711948b2635bc354552ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  teamname: team2
+  sm: {fileID: 0}
 --- !u!1 &2033777118
 GameObject:
   m_ObjectHideFlags: 0
@@ -1000,9 +1030,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerSetting: 0
-  speed: 5
-  clampValue: 5
-  axisName: 
+  speed: 2
+  clampValue: 7
+  axisName: player1
 --- !u!23 &2033777121
 MeshRenderer:
   m_ObjectHideFlags: 0

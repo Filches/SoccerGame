@@ -27,7 +27,7 @@ public class PaddleMovement : MonoBehaviour
         }
     }
 
-    void update()
+    void Update()
     {
         MovePaddle(Input.GetAxis(axisName));
     }
