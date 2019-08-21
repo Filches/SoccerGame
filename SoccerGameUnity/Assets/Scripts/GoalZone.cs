@@ -14,12 +14,12 @@ public class GoalZone : MonoBehaviour
 
         if(teamname == "team1")
         {
-            sm.Team1Scored();
+            sm.Team2Scored();
         }
 
         if (teamname == "team2")
         {
-            sm.Team2Scored();
+            sm.Team1Scored();
         }
     }
 }

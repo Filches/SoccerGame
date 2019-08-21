@@ -4,17 +4,25 @@ using UnityEngine;
 
 public class ScoreBoard : MonoBehaviour
 {
-    public int team1;
-    public int team2;
+    private int player1Score = 0;
+    private int player2Score = 0;
+    public TextMesh text;
+
+    private void Start()
+    {
+        text = GetComponent<TextMesh>();
+    }
 
     public void Team1Scored()
     {
-        team1 += 1;
+        player1Score++;
+        text.text = player1Score.ToString() + " : " + player2Score.ToString();
     }
 
     public void Team2Scored()
     {
-        team2++;
+        player2Score++;
+        text.text = player1Score.ToString() + " : " + player2Score.ToString();
     }
 
 }
